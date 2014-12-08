@@ -6,14 +6,44 @@
     brew_taps:
     - caskroom/fonts
     brew_packages:
-    - git
-    - zsh
-    - vim
-    - the_silver_searcher
+    - android-sdk
+    - casperjs
     - ctags
+    - curl
+    - git
+    - go
+    - hub
+    - matplotlib
+    - mercurial
+    - mplayer
+    - nmap
+    - openvpn
+    - r
+    - rdesktop
     - reattach-to-user-namespace
+    - sshfs
+    - the_silver_searcher
+    - tintin
     - tmux
+    - zsh
     cask_packages:
+    - arduino
+    - audacity
+    - bittorrent-sync
+    - citrix-receiver
+    - dropbox
+    - firefox
     - font-inconsolata-for-powerline
+    - fuze
+    - gimp
+    - google-chrome
+    - google-drive
+    - hipchat
     - iterm2
-    - macvim
+    - keepassx
+    - keka
+    - libreoffice
+    - synergy
+    - tunnelblick
+    - vagrant
+    - xquartz

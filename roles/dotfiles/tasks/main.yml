@@ -1,3 +1,24 @@
 ---
 - name: Setup dotfiles
   git: "repo={{ dotfiles_repo }} dest={{ dotfiles_dest }} version={{ dotfiles_version }} accept_hostkey=yes"
+
+- name: Install zprezto
+  file: src={{ item.path }} dest={{item.dest}} state=link
+  with_itmes:
+    - { path: '~/lib/dotfiles/zsh/prezto', dest: '~/.zprezto' }
+    - { path: '~/.zprezto/runcoms/zlogin', dest: '~/.zlogin' }
+    - { path: '~/.zprezto/runcoms/zlogout', dest: '~/.zlogout' }
+    - { path: '~/.zprezto/runcoms/zzpreztorc', dest: '~/.zzpreztorc' }
+    - { path: '~/.zprezto/runcoms/zprofile', dest: '~/.zprofile' }
+    - { path: '~/.zprezto/runcoms/zshenv', dest: '~/.zshenv' }
+    - { path: '~/.zprezto/runcoms/zshrc', dest: '~/.zshrc' }
+
+- name: Install vim
+  file: src={{ item.path }} dest={{item.dest}} state=link
+  with_itmes:
+    - { path: '~/lib/dotfiles/vim', dest: '~/.vim' }
+    - { path: '~/lib/dotfiles/vim/vimrc', dest: '~/.vimrc' }
+
+- name: Install vim plugins
+  git: "repo=https://github.com/Shougo/neobundle.vim dest=~/.vim/bundles/neobundle accept_hostkey=yes"
+  command: 'vim --noplugin -u vim/bundles.vim -N "+set hidden" "+syntax on" +NeoBundleClean +NeoBundleInstall +qall'

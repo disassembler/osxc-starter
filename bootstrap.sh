@@ -24,8 +24,7 @@ then
   /usr/bin/make install
 fi
 
-if [ ! -d ~/lib/osxc-starter/roles ]
-then
-  ansible-galaxy install -r requirements.yml
-fi
+ansible-galaxy install -r requirements.yml
+touch ~/.bash_profile
+touch ~/.bash_login
 #ansible-playbook desktop.yml
