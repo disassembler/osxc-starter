@@ -1,0 +1,3 @@
+dotfiles_repo: git@github.com:disassembler/dotfiles
+dotfiles_dest: ~/lib/dotfiles
+dotfiles_version: master
