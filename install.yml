@@ -4,10 +4,12 @@
   roles:
   - role: osxc.packages
     brew_taps:
-    - caskroom/fonts
+    - Homebrew/python
+    - ClockworkNet/cmc
     brew_packages:
     - android-sdk
     - casperjs
+    - cmc
     - ctags
     - curl
     - git
@@ -17,11 +19,9 @@
     - mercurial
     - mplayer
     - nmap
-    - openvpn
-    - r
+    - python
     - rdesktop
     - reattach-to-user-namespace
-    - sshfs
     - the_silver_searcher
     - tintin
     - tmux
@@ -33,7 +33,6 @@
     - citrix-receiver
     - dropbox
     - firefox
-    - font-inconsolata-for-powerline
     - fuze
     - gimp
     - google-chrome
@@ -47,3 +46,4 @@
     - tunnelblick
     - vagrant
     - xquartz
+    - parallels-desktop
