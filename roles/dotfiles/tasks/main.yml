@@ -1,0 +1,3 @@
+---
+- name: Setup dotfiles
+  git: "repo={{ dotfiles_repo }} dest={{ dotfiles_dest }} version={{ dotfiles_version }} accept_hostkey=yes"
